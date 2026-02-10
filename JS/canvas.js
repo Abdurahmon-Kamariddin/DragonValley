@@ -3,7 +3,7 @@ const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 let f = new FontFace('Press Start 2P', 'url(../FONTS/Press_Start_2P/PressStart2P-Regular.ttf)');
 //Our constant variables
-const gravity = 0.9;
+const gravity = 0.6;
 var obstacleSpeed = -5;
 var obstacleIncreaseSpeed = -0.0005;
 let gameOver = false;
