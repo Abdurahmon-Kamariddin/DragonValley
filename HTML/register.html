@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon Valley</title>
+  <!-- Link to our CSS style sheet -->
+  <link href="../CSS/styles.css" rel="stylesheet">
+  
+</head>
+
+
+<body>
+
+
+
+  <!-- Background music (autoplay must be enabled in the browser of the user) -->
+  <embed src="../AUDIO/waterfallbirds.mp3" loop="true" autostart="true" width="0" height="0">
+
+  <!-- Page header containing the navigation to all pages -->
+  <header>
+    <div class="container">
+      <!-- Here is the logo and game name -->
+      <a href="../index.html"><img src="../IMAGES/cleancrown.png" height="100px" alt="Dragon Valley logo" class="logo">
+      </a>
+      <h1
+        style="display: inline-block; font-family: 'Press Start 2P'; font-size: 14px; color: rgb(24, 128, 21); padding-top: 35px; font-weight: 200;">
+        Dragon Valley</h1>
+      <!-- Navigation bar -->
+      <nav>
+        <ul>
+          <!-- Our links to our other pages -->
+          <li><a href="../index.html">About</a></li>
+          <li><a href="play.html">Play</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="rankings.html">Rankings</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+  </header>
+  
+  <div id="title">
+    <h2>Register</h2>
+    <h3 id="logininfo"> </h3>
+    <p id="nolog"></p>
+    <p id="nopass"> </p>
+    <p id="noemail"> </p>
+    <p id="noage"> </p>
+  </div>
+  
+  <!-- Our text input for registering with a username and password and also confirming our password -->
+  <div id="inputs">
+    
+    <!-- All regEx has to be checked for form to be submitted -->
+    
+      <label id="unamelabel"><b>Username</b></label>
+      <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+
+      <label id="pswlabel"><b>Password</b></label>
+      <input id="password" type="password"
+        placeholder="Enter Password (with more than 6 characters, a number and atleast one capital)" name="psw" required>
+
+      <label id="emaillbl"><b>Email</b></label>
+      <input id="email" type="text" placeholder="Enter Email">
+
+      <label id="agelbl"><b>Age</b></label>
+      <input id="age" type="number" placeholder="Enter Age" name="age" required>
+      <button id="registerbutton" onclick="submit()">Register</button>
+      <script src="../JS/index.js"></script>
+    
+    <!-- our form validation for our inputs for password, email and age -->
+  </div>
+
+  
+
+  <!-- Our 'Already got an account?' message  -->
+  <div id="notlogged">
+    <p style="font-size: 20px ; text-align: center;">Already have an account?
+    <p>
+    <p>Login here using your existing username and password to log your new high scores!</p>
+    <a href="login.html"> <button id="notlogbutt">Login here!</button> </a>
+
+
+  </div>
+
+  <!-- Our footer which contains our links to social media sites of the game (which do not exist as there is no intention of taking this webpage live) -->
+  <footer id="footer">
+    <div id="socials">
+      <ul>
+        <li><a href="https://en-gb.facebook.com/"> <img src="../IMAGES/facebooklogo.png" alt="facebook logo"
+              height="30px"> </a></li>
+        <li><a href="https://www.instagram.com/"> <img src="../IMAGES/instagramlogo.png" alt="instagram logo"
+              height="30px"> </a></li>
+        <li><a href="https://twitter.com/?lang=en"> <img src="../IMAGES/twitterlogo.png" alt="twitter logo"
+              height="30px"> </a></li>
+        <li><a href="https://www.youtube.com/"> <img src="../IMAGES/youtubelogo.png" alt="youtube logo" height="30px">
+          </a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+
+  </div>
+</body>
+
+
+
+</html>

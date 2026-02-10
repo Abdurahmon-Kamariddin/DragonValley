@@ -1,0 +1,513 @@
+/* Our main body of contents, with our animated background*/
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    font-family: 'Press Start 2P';
+    background-image: url(../IMAGES/biglandanimated.gif);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+
+#page-container {
+    min-height: 100%;
+
+}
+
+/* Our unique game font that will be used throughout the website*/
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url(../FONTS/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+/* To stop our logo and navigation sticking to the sided of the page */
+.container {
+
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Our header that contains our navigation to other pages  */
+header {
+
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: min-content;
+}
+
+/* Our clear fix that returns our container */
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Making our logo float to the left so we can have the title next to it */
+.logo {
+    float: left;
+}
+
+/* Making our navigation options float to the right hand side */
+nav {
+    float: right;
+}
+
+/* Removes our padding and space to each side of our list of page options and removes bullet point style */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Positioning of our page options in a list along the header */
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 37px;
+    padding-right: 15px;
+    position: relative;
+}
+
+/* Our page options' font settings  */
+nav a {
+    color: rgb(24, 128, 21);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P';
+    font-size: 13px;
+    font-weight: 350;
+}
+
+/* The shade that the navigation bar options will turn when hovered over */
+nav a:hover {
+    color: rgb(20, 107, 17);
+}
+
+/* Our hover animation that will indicate which button the cursor is over */
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(24, 128, 21);
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+/* The width of the animation that extends the length of the word (eg. Home) */
+nav a:hover::before {
+    width: 100%;
+
+}
+
+/* INDEX / ABOUT PAGE */
+#title {
+    /* This is the css for all titles for all pages*/
+    z-index: 1;
+    position: absolute;
+    left: 40px;
+    top: 150px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 2px 2px;
+    text-decoration: underline;
+}
+
+/* Our introductory explanation of the basics of the game */
+#welcometxt {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(244, 255, 255, 0.6);
+    border-top: 10px outset rgb(0, 0, 0);
+    border-bottom: 10px outset rgb(0, 0, 0);
+    height: 225px;
+    padding-bottom: 500px;
+    position: relative;
+    text-align: justify;
+}
+
+/* The images for the controls needed to play the game */
+#keys {
+
+    top: 450px;
+
+    position: fixed;
+}
+
+#wadkeys {
+    position: fixed;
+
+    left: 800px;
+}
+
+/* PLAY PAGE */
+
+/* Our canvas where our game will be played (An example picture is inserted to show what the website will look like */
+#startscreen {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1280px;
+    height: 720px;
+    font-family: 'Press Start 2P';
+}
+
+#startbutton {
+    font-family: 'Press Start 2P';
+    width: 200px;
+    height: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 450px;
+    left: 1300px;
+}
+
+#restartbutton {
+    display: none;
+    font-family: 'Press Start 2P';
+    width: 200px;
+    height: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 450px;
+    left: 1300px;
+}
+
+#scoreinfo {
+    visibility: hidden;
+    position: relative;
+    left: 1320px;
+    top: 300px;
+    color: white;
+}
+
+canvas {
+    background-image: url('../IMAGES/startscreen.png');
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: block;
+    font-family: 'Press Start 2P';
+    border: 10px inset rgb(0, 0, 0);
+}
+
+/* LOGIN PAGE */
+/* Our text input for our existing username and password */
+#inputs {
+    background-color: rgba(240, 255, 255, 0.8);
+    border: 10px outset black;
+    position: absolute;
+    left: 40px;
+    top: 350px;
+    display: grid;
+    width: min-content;
+    height: min-content;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-family: 'Press Start 2P';
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 1px 1px;
+
+}
+
+/* Our text input for our existing username and password */
+#username {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 1000px;
+    font-family: 'Press Start 2P';
+}
+
+#password {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 1000px;
+    font-family: 'Press Start 2P';
+}
+
+#loginbutt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 400px;
+    font-family: 'Press Start 2P';
+    display: inline;
+    margin-left: 30%;
+}
+
+#signoutbutt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 400px;
+    font-family: 'Press Start 2P';
+    display: inline;
+    margin-left: 30%;
+}
+
+/* Our 'Not registered?' message */
+#notregistered {
+
+
+    background-color: rgba(240, 255, 255, 0.8);
+    border: 10px outset black;
+    position: absolute;
+    height: min-content;
+    width: 250px;
+    left: 1250px;
+    top: 350px;
+    right: 100px;
+}
+
+#notregistered p {
+
+    min-height: min-content;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 2px 2px;
+    text-align: center;
+}
+
+#notregbutt {
+    font-family: 'Press Start 2P';
+    position: relative;
+    left: 29px;
+
+}
+
+/* REGISTER PAGE */
+/* Our text input for our existing username and password */
+
+/* Our text input for registering with a username and password and also confirming our password */
+
+#regvalidation {
+    position: relative;
+
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 2px 2px;
+}
+
+#username {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 1000px;
+    font-family: 'Press Start 2P';
+}
+
+#password {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 1000px;
+    font-family: 'Press Start 2P';
+}
+
+#email {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 1000px;
+    font-family: 'Press Start 2P';
+}
+
+#age {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 1000px;
+    font-family: 'Press Start 2P';
+}
+
+
+#registerbutton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 500px;
+    font-family: 'Press Start 2P';
+}
+
+/* Our 'Already got an account?' message  */
+#notlogged {
+    background-color: rgba(240, 255, 255, 0.8);
+    border: 10px outset black;
+    position: absolute;
+    height: min-content;
+    width: 200px;
+    left: 1250px;
+    top: 350px;
+    right: 100px;
+}
+
+#notlogged p {
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 2px 2px;
+    text-align: center;
+}
+
+#notlogbutt {
+    font-family: 'Press Start 2P';
+    position: relative;
+
+
+
+}
+
+/* RANKINGS PAGE */
+
+
+select {
+    font-family: 'Press Start 2P';
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 2px 2px;
+}
+
+/* Our ranking table */
+#rankings {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 100px;
+    background-color: azure;
+    opacity: 0.7;
+}
+
+table {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+th {
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 2px 2px;
+}
+
+
+table,
+th,
+td {
+    font-family: 'Press Start 2P';
+    border: 2px solid black;
+    border-radius: 0px;
+}
+
+/* The top scorers name is announced here */
+#winner {
+    position: relative;
+    padding-top: 10px;
+
+}
+
+#winner h2 {
+    color: rgb(255, 228, 27);
+    text-shadow: rgb(0, 0, 0) 2px 2px;
+    text-align: center;
+}
+
+#winner h3 {
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 2px 2px;
+    text-align: center;
+}
+
+/* CONTACTS PAGE  */
+/* Face of the website */
+#me {
+    position: fixed;
+    left: 400px;
+    top: 330px;
+    width: 300px;
+    border: inset 5px black;
+    filter: brightness(140%);
+}
+
+#crown {
+    position: fixed;
+    left: 530px;
+    top: 290px;
+    transform: rotate(45deg);
+    width: 300px;
+}
+
+#name {
+    background-color: rgba(240, 255, 255, 0.7);
+    border: outset 5px black;
+    position: fixed;
+    left: 385px;
+    top: 650px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(101, 206, 255) 2px 2px;
+}
+
+/* Contact details */
+#contactdet {
+    position: fixed;
+    left: 800px;
+    top: 360px;
+    width: 800px;
+    height: min-content;
+    background-color: azure;
+    opacity: 0.75;
+    border: inset 5px black;
+}
+
+#details {
+    padding-left: 10px;
+}
+
+
+/* Our footer which contains our links to social media sites of the game (which do not exist as there is no intention of taking this webpage live */
+#footer {
+    position: fixed;
+    width: 100%;
+    top: 93%;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 57.5px;
+}
+
+/* The list of social media links which are anchored to their respective logos, also their positioning */
+footer ul {
+
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    list-style: none;
+    float: right;
+}
+
+#socials {
+    opacity: 1;
+}
+
+footer li {
+    display: inline-block;
+    margin-left: 70px;
+
+    position: relative;
+}

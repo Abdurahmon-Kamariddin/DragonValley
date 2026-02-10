@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon Valley</title>
+  <!-- Link to our CSS style sheet -->
+  <link href="../CSS/styles.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+
+  <!-- Background music (autoplay must be enabled in the browser of the user) -->
+  <embed src="../AUDIO/waterfallbirds.mp3" loop="true" autostart="true" width="0" height="0">
+
+  <!-- Page header containing the navigation to all pages -->
+  <header>
+    <div class="container">
+      <!-- Here is the logo and game name -->
+      <a href="../index.html"><img src="/IMAGES/cleancrown.png" height="100px" alt="Dragon Valley logo" class="logo">
+      </a>
+      <h1
+        style="display: inline-block; font-family: 'Press Start 2P'; font-size: 14px; color: rgb(24, 128, 21); padding-top: 35px; font-weight: 200;">
+        Dragon Valley</h1>
+      <!-- Navigation bar -->
+      <nav>
+        <ul>
+          <!-- Our links to our other pages -->
+          <li><a href="../index.html">About</a></li>
+          <li><a href="play.html">Play</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="rankings.html">Rankings</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+  </header>
+  <div id="title">
+    <h2>Login</h2>
+    <!-- Feedback about login displayed here -->
+    <h3 id="logininfo"></h3>
+    <h3 id="loginsuccess"></h3>
+    <h3 id="loginfail"></h3>
+  </div>
+
+  <!-- Our text input for our existing username and password -->
+  <div id="inputs">
+
+    <label id="unamelabel" for="uname"><b>Username</b></label>
+    <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+
+    <label id="pswlabel" for="psw"><b>Password</b></label>
+    <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+
+    <button id="loginbutt" onclick="login()">Login</button>
+    <button id="signoutbutt" onclick="signout()">Sign out</button>
+
+<!-- our form validation for our inputs for password, email and age -->
+    <script src="../JS/index.js">
+    </script>
+
+  </div>
+  <!-- Our 'Not registered?' message  -->
+  <div id="notregistered">
+    <p style="font-size: 20px ;">Not registered?
+    <p>
+    <p>Register here to make an account to be able to save your high scores!</p>
+    <a href="register.html"> <button id="notregbutt">Register here!</button> </a>
+  </div>
+
+  <!-- Our footer which contains our links to social media sites of the game (which do not exist as there is no intention of taking this webpage live) -->
+  <footer id="footer">
+    <div id="socials">
+      <ul>
+        <li><a href="https://en-gb.facebook.com/"> <img src="../IMAGES/facebooklogo.png" alt="facebook logo"
+              height="30px"> </a></li>
+        <li><a href="https://www.instagram.com/"> <img src="../IMAGES/instagramlogo.png" alt="instagram logo"
+              height="30px"> </a></li>
+        <li><a href="https://twitter.com/?lang=en"> <img src="../IMAGES/twitterlogo.png" alt="twitter logo"
+              height="30px"> </a></li>
+        <li><a href="https://www.youtube.com/"> <img src="../IMAGES/youtubelogo.png" alt="youtube logo" height="30px">
+          </a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+
+  </div>
+</body>
+
+
+
+</html>
