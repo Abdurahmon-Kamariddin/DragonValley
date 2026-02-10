@@ -3,7 +3,7 @@ const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 let f = new FontFace('Press Start 2P', 'url(../FONTS/Press_Start_2P/PressStart2P-Regular.ttf)');
 //Our constant variables
-const gravity = 0.6;
+const gravity = 0.4;
 var obstacleSpeed = -5;
 var obstacleIncreaseSpeed = -0.0005;
 let gameOver = false;
@@ -24,7 +24,7 @@ class Player {
         }
         this.width = 49;
         this.height = 40;
-        this.speed = 8;
+        this.speed = 6;
         this.image = new Image();
         this.image.src = "../IMAGES/dragonsprite.png"
 
